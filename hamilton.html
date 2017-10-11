@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style>
+    .here {
+      text-decoration: line-through;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <p onclick="toggleHere(this)">Jacque</p>
+  <p onclick="toggleHere(this)">Luke</p>
+  <p onclick="toggleHere(this)">Neil</p>
+  <p onclick="toggleHere(this)">Adam</p>
+  <p onclick="toggleHere(this)">Jesus</p>
+  <p onclick="toggleHere(this)">Alex</p>
+  <p onclick="toggleHere(this)">Dhiraj</p>
+  <p onclick="toggleHere(this)">Andrew</p>
+  <p onclick="toggleHere(this)">Sam</p>
+  <p onclick="toggleHere(this)">Nathan</p>
+  <p onclick="toggleHere(this)">Rocio</p>
+  <p onclick="toggleHere(this)">Victor</p>
+  <p onclick="toggleHere(this)">Elia</p>
+  <p onclick="toggleHere(this)">Cyrus</p>
+  <p onclick="toggleHere(this)">Austin</p>
+  <p onclick="toggleHere(this)">Mitch</p>
+
+  <button onclick="hideAttended()">Hide attended students</button>
+  <button onclick="showAllStudents()">Show all students</button>
+  <script>
+    function showAllStudents() {
+      var ptags = document.querySelectorAll('p');
+      for(let ptag of ptags) {
+        ptag.classList.remove('hidden');
+      }
+    }
+
+    function hideAttended() {
+      var herePtags = document.querySelectorAll('p.here');
+      for(var ptag of herePtags){
+        ptag.classList.add('hidden');
+      }
+    }
+
+    function toggleHere(ptag) {
+      ptag.classList.toggle("here");
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
